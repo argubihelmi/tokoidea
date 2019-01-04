@@ -36,8 +36,8 @@ export default class LoginPanel extends React.Component {
       <View style={styles.container}>
         {/* <View> */}
 
-        <Image  resizeMode="contain" style={styles.logo} source={require('../assets/images/Tokopedia_Mascot.png')} />
-        <Image  resizeMode="contain" style={styles.logo2} source={require('../assets/images/Tokopedia_Logo-transparency.png')} />
+        <Image style={styles.logo} source={require('../assets/images/Tokopedia_Mascot.png')} />
+        <Image style={styles.logo2} source={require('../assets/images/Tokopedia_Logo-transparency.png')} />
         {/* </View> */}
         <View style={styles.itemContainer}>
           <TextInput
@@ -64,7 +64,7 @@ export default class LoginPanel extends React.Component {
 
           </TouchableOpacity>
         </View >
-        <Text style={styles.errMsg}>{this.state.errorMessage}</Text>
+        {/* <Text style={styles.errMsg}>{this.state.errorMessage}</Text> */}
       </View>
     );
   }
@@ -73,9 +73,10 @@ export default class LoginPanel extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    padding: 20,
+    padding: 50,
     backgroundColor: 'rgba(227, 249, 227, 1.0)',
     height: '100%',
   },
@@ -107,21 +108,26 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(66, 181, 73, 1.0)', //'#f8da87', //'#ff9f58',
   },
   logo: {
-    flexGrow:1,
+    // flexGrow:1,
     marginTop: 50,
-    height:200,
-    width:180,
-    alignItems: 'center',
-    justifyContent:'center'
+    height:'25%',
+    width:'100%',
+    // alignItems: 'center',
+    // justifyContent:'center',
+    // backgroundColor: 'yellow',
+    resizeMode: 'contain',
   },
   logo2: {
-    flexGrow:1,
+    // flexGrow:1,
     // height:200,
-    // width:180,
-    marginVertical: -300,
-    marginHorizontal: 25,
+    width:'100%',
+    height:'40%',
+    // marginVertical: -300,
+    // marginHorizontal: 25,
     alignItems: 'center',
-    justifyContent:'center'
+    justifyContent:'center',
+    // backgroundColor: 'yellow',
+    resizeMode: 'cover',
   },
   itemContainer: {
     marginTop: 20,
