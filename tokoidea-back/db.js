@@ -35,28 +35,35 @@ class Db {
         this.users.insertMany([
             {
                 login: 'helmi',
-                hash: sha256('helmi'),
+                hash: sha256('pass'),
                 localization: en,
                 fullname: 'Helmi Helmi',
                 token: 'a'
             },
             {
                 login: 'umam',
-                hash: sha256('umam'),
+                hash: sha256('pass'),
                 localization: en,
                 fullname: 'Umam Maulana',
                 token: 'a'
             },
             {
-                login: 'test',
-                hash: sha256('ala'),
+                login: 'test1',
+                hash: sha256('pass'),
                 localization: en,
                 fullname: 'Test Account',
                 token: 'a'
             },
             {
-                login: 'asu',
-                hash: sha256('asu'),
+                login: 'test2',
+                hash: sha256('pass'),
+                localization: en,
+                fullname: 'Test Account',
+                token: 'a'
+            },
+            {
+                login: 'test3',
+                hash: sha256('pass'),
                 localization: en,
                 fullname: 'Test Account',
                 token: 'a'
@@ -84,9 +91,7 @@ class Db {
                 image: 'https://picsum.photos/320',
                 localization: en,
                 user: 'test',
-                swipes: {
-                    'helmi': 'right'
-                },
+                swipes: {},
                 messages: []
             },
             {
@@ -95,11 +100,7 @@ class Db {
                 image: 'https://picsum.photos/302',
                 localization: en,
                 user: 'test',
-                swipes: {
-                    'umam': 'right',
-                    'test': 'right',
-                    'helmi': 'right'
-                },
+                swipes: {},
                 messages: []
             },
             {

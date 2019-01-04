@@ -7,8 +7,8 @@ export default class LoginPanel extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      login: 'helmi',
-      password: 'helmi',
+      login: '',
+      password: 'pass',
       errorMessage: '',
     }
   }
@@ -44,7 +44,7 @@ export default class LoginPanel extends React.Component {
             underlineColorAndroid="transparent"
             color='#ffffff'
             style={styles.input}
-            onChangeText={text => this.setState({ login: text })}
+            onChangeText={text => this.setState({ login: text.toLowerCase() })}
             value={this.state.login}
             placeholder="login"
           />

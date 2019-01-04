@@ -14,7 +14,6 @@ function Card(props) {
           Alert.alert(
             'Details',
             `Name:${self.title}
-            \nLocalization: ${self.localization}
             \nDescription: ${self.description}`,
             [
               { text: 'OK', onPress: () => console.log('OK Pressed') },
@@ -25,8 +24,6 @@ function Card(props) {
       >
         <Image style={styles.thumbnail} source={{ uri: props.image }} />
         <Text style={styles.text}>{props.title}</Text>
-        {/* <Text style={styles.details}>{props.localization}</Text> */}
-
       </TouchableOpacity>
     </View>
   )
